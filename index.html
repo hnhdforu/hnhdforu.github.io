@@ -6,7 +6,7 @@
 <meta name="description" content="HNHDFORU — discover featured movie trailers and upcoming movie previews.">
 <title>HNHDFORU | Movie Trailers & Upcoming Releases</title>
 <style>
-:root{--bg:#080808;--surface:#141414;--surface2:#1d1a12;--gold:#d6b34b;--gold2:#f1d77b;--text:#f7f4eb;--muted:#b9b2a1;--line:#40371f}
+:root{--bg:#080808;--surface:#141414;--gold:#d6b34b;--gold2:#f1d77b;--text:#f7f4eb;--muted:#b9b2a1;--line:#40371f}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
 a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}
 header{position:sticky;top:0;z-index:9;background:#080808ed;backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
@@ -14,68 +14,52 @@ header{position:sticky;top:0;z-index:9;background:#080808ed;backdrop-filter:blur
 nav{display:flex;gap:22px;flex-wrap:wrap;color:var(--muted);font-size:.93rem}nav a:hover{color:var(--gold2)}
 .hero{padding:86px 0 76px;background:radial-gradient(ellipse at 78% 25%,#554218 0,transparent 33%),linear-gradient(115deg,#211b0e,#080808 68%);border-bottom:1px solid var(--line)}
 .kicker{color:var(--gold2);font-size:.76rem;font-weight:850;letter-spacing:2.5px;text-transform:uppercase}
-h1{font-size:clamp(2.8rem,7vw,5.4rem);line-height:.98;letter-spacing:-2px;max-width:800px;margin:15px 0}
-.hero p{color:var(--muted);font-size:1.1rem;max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:8px;background:var(--gold);color:#111;font-weight:850;border:1px solid var(--gold)}
-.btn.alt{background:transparent;color:var(--gold2);border-color:#79632c}.btn:hover{filter:brightness(1.1)}
+h1{font-size:clamp(2.8rem,7vw,5.4rem);line-height:.98;letter-spacing:-2px;max-width:800px;margin:15px 0}.hero p{color:var(--muted);font-size:1.1rem;max-width:620px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 19px;border-radius:8px;background:var(--gold);color:#111;font-weight:850;border:1px solid var(--gold)}
+.btn.alt{background:transparent;color:var(--gold2);border-color:#79632c}.btn:hover,.play:hover{filter:brightness(1.12)}
 section{padding:52px 0}.head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-bottom:22px}h2{font-size:1.85rem;margin:0}.muted{color:var(--muted);margin:5px 0 0}
 .filters{display:flex;gap:10px;margin:18px 0 24px;flex-wrap:wrap}input,select{background:var(--surface);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:12px;font:inherit}input{flex:1;min-width:190px}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--surface);border:1px solid var(--line);border-radius:13px;overflow:hidden}
 .poster{aspect-ratio:16/9;display:grid;place-items:center;text-align:center;padding:20px;background:linear-gradient(135deg,#59491e,#17140d);color:var(--gold2);font-weight:900;letter-spacing:1.5px;font-size:1.15rem}
 .card:nth-child(2n) .poster{background:linear-gradient(135deg,#35301d,#171717)}.card:nth-child(3n) .poster{background:linear-gradient(135deg,#51401b,#282114)}
-.body{padding:16px}.tag{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold2);font-weight:850}
-h3{font-size:1.12rem;margin:6px 0}.body p{font-size:.91rem;color:var(--muted);margin:5px 0 15px}
-.link{display:inline-block;color:var(--gold2);font-weight:800;font-size:.91rem}.link:hover{text-decoration:underline}
-.upcoming{background:linear-gradient(120deg,#211b0e,#101010);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.note{border:1px solid var(--line);border-radius:12px;padding:18px;background:#111}
-footer{padding:28px 0;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}
-.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.empty{display:none;color:var(--muted);padding:20px 0}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:62px 0}}
-@media(max-width:540px){.nav{align-items:flex-start;flex-direction:column;padding:14px 0}nav{width:100%;justify-content:space-between;gap:10px;font-size:.82rem}.grid{grid-template-columns:1fr}.head{align-items:flex-start;flex-direction:column}}
+.body{padding:16px}.tag{font-size:.72rem;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold2);font-weight:850}h3{font-size:1.12rem;margin:6px 0}.body p{font-size:.91rem;color:var(--muted);margin:5px 0 15px}
+.play{display:inline-block;background:var(--gold);color:#111;border:0;border-radius:7px;padding:9px 13px;font:inherit;font-weight:850;cursor:pointer}.play:focus-visible,.close:focus-visible{outline:3px solid var(--gold2);outline-offset:3px}
+.upcoming{background:linear-gradient(120deg,#211b0e,#101010);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.note{border:1px solid var(--line);border-radius:12px;padding:18px;background:#111}
+footer{padding:28px 0;color:var(--muted);font-size:.88rem;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.empty{display:none;color:var(--muted);padding:20px 0}
+.player-modal{position:fixed;inset:0;z-index:20;background:#000e;display:none;align-items:center;justify-content:center;padding:20px}.player-modal[open]{display:flex}.player-box{width:min(900px,100%);background:#111;border:1px solid var(--line);border-radius:13px;padding:16px;box-shadow:0 20px 80px #000}.player-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:12px}.player-top h2{font-size:1.15rem}.close{background:transparent;color:var(--text);border:1px solid var(--line);border-radius:7px;padding:7px 11px;font:inherit;cursor:pointer}.video-frame{aspect-ratio:16/9;background:#000}.video-frame iframe{width:100%;height:100%;border:0}.player-note{font-size:.82rem;color:var(--muted);margin:10px 0 0}
+@media(max-width:760px){.grid{grid-template-columns:repeat(2,1fr)}.hero{padding:62px 0}}@media(max-width:540px){.nav{align-items:flex-start;flex-direction:column;padding:14px 0}nav{width:100%;justify-content:space-between;gap:10px;font-size:.82rem}.grid{grid-template-columns:1fr}.head{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
 <body>
-<header><div class="wrap nav">
-<a class="brand" href="#home" aria-label="HNHDFORU home">HNHDFORU</a>
-<nav aria-label="Main navigation"><a href="#home">Home</a><a href="#featured">Movie Trailers</a><a href="#upcoming">Upcoming Trailers</a><a href="#about">About</a></nav>
-</div></header>
+<header><div class="wrap nav"><a class="brand" href="#home" aria-label="HNHDFORU home">HNHDFORU</a><nav aria-label="Main navigation"><a href="#home">Home</a><a href="#featured">Movie Trailers</a><a href="#upcoming">Upcoming Trailers</a><a href="#about">About</a></nav></div></header>
 <main>
-<section class="hero" id="home"><div class="wrap">
-<div class="kicker">The world of cinema</div>
-<h1>Movie moments.<br><span style="color:var(--gold2)">Coming soon.</span></h1>
-<p>Explore featured movie trailers, discover upcoming releases and find your next cinema experience — all in one place.</p>
-<div class="actions"><a class="btn" href="#featured">Watch movie trailers</a><a class="btn alt" href="#upcoming">See what's coming</a></div>
-</div></section>
-
-<section id="featured"><div class="wrap">
-<div class="head"><div><div class="kicker">Watch & discover</div><h2>Featured Movie Trailers</h2><p class="muted">Choose a film to find its official trailer.</p></div></div>
-<div class="filters"><input id="search" type="search" placeholder="Search a movie or genre…" aria-label="Search movies">
-<select id="genre" aria-label="Filter by genre"><option value="all">All genres</option><option>Action</option><option>Drama</option><option>Comedy</option><option>Animation</option><option>Thriller</option></select></div>
+<section class="hero" id="home"><div class="wrap"><div class="kicker">The world of cinema</div><h1>Movie moments.<br><span style="color:var(--gold2)">Coming soon.</span></h1><p>Explore featured movie trailers, discover upcoming releases and find your next cinema experience — all in one place.</p><div class="actions"><a class="btn" href="#featured">Watch movie trailers</a><a class="btn alt" href="#upcoming">See what's coming</a></div></div></section>
+<section id="featured"><div class="wrap"><div class="head"><div><div class="kicker">Watch & discover</div><h2>Featured Movie Trailers</h2><p class="muted">Play trailers right here without leaving the website.</p></div></div>
+<div class="filters"><input id="search" type="search" placeholder="Search a movie or genre…" aria-label="Search movies"><select id="genre" aria-label="Filter by genre"><option value="all">All genres</option><option>Action</option><option>Drama</option><option>Comedy</option><option>Animation</option><option>Thriller</option></select></div>
 <div class="grid" id="featuredGrid">
-<article class="card" data-title="Action movie trailer" data-genre="Action"><div class="poster">ACTION<br>TRAILER</div><div class="body"><span class="tag">Action</span><h3>Action Movie Picks</h3><p>Explore official action movie previews and teasers.</p><a class="link" href="https://www.youtube.com/results?search_query=official+action+movie+trailer" target="_blank" rel="noopener">Find official trailers ↗</a></div></article>
-<article class="card" data-title="Drama movie trailer" data-genre="Drama"><div class="poster">DRAMA<br>TRAILER</div><div class="body"><span class="tag">Drama</span><h3>Drama Movie Picks</h3><p>Discover stories, performances and dramatic first looks.</p><a class="link" href="https://www.youtube.com/results?search_query=official+drama+movie+trailer" target="_blank" rel="noopener">Find official trailers ↗</a></div></article>
-<article class="card" data-title="Comedy movie trailer" data-genre="Comedy"><div class="poster">COMEDY<br>TRAILER</div><div class="body"><span class="tag">Comedy</span><h3>Comedy Movie Picks</h3><p>Find light-hearted films and their official previews.</p><a class="link" href="https://www.youtube.com/results?search_query=official+comedy+movie+trailer" target="_blank" rel="noopener">Find official trailers ↗</a></div></article>
-<article class="card" data-title="Animation movie trailer" data-genre="Animation"><div class="poster">ANIMATION<br>TRAILER</div><div class="body"><span class="tag">Animation</span><h3>Animation Movie Picks</h3><p>Explore animated adventures and family-friendly previews.</p><a class="link" href="https://www.youtube.com/results?search_query=official+animation+movie+trailer" target="_blank" rel="noopener">Find official trailers ↗</a></div></article>
-<article class="card" data-title="Thriller movie trailer" data-genre="Thriller"><div class="poster">THRILLER<br>TRAILER</div><div class="body"><span class="tag">Thriller</span><h3>Thriller Movie Picks</h3><p>Discover suspenseful stories through official trailers.</p><a class="link" href="https://www.youtube.com/results?search_query=official+thriller+movie+trailer" target="_blank" rel="noopener">Find official trailers ↗</a></div></article>
-<article class="card" data-title="Indian cinema movie trailer" data-genre="Action"><div class="poster">INDIAN<br>CINEMA</div><div class="body"><span class="tag">Indian Cinema</span><h3>Indian Movie Trailers</h3><p>Search official previews from Indian film industries.</p><a class="link" href="https://www.youtube.com/results?search_query=official+Indian+movie+trailer" target="_blank" rel="noopener">Find official trailers ↗</a></div></article>
-</div><p class="empty" id="empty">No matching categories. Try another search.</p>
-</div></section>
-
-<section class="upcoming" id="upcoming"><div class="wrap">
-<div class="kicker">First looks & previews</div><h2>Upcoming Movie Trailers</h2><p class="muted">Find newly released teasers and trailers for films arriving soon.</p>
-<div class="grid" style="margin-top:22px">
-<article class="card"><div class="poster">COMING<br>SOON 01</div><div class="body"><span class="tag">Upcoming releases</span><h3>Upcoming Indian Movies</h3><p>Search for official upcoming Indian movie trailers.</p><a class="link" href="https://www.youtube.com/results?search_query=official+upcoming+Indian+movie+trailers" target="_blank" rel="noopener">Explore upcoming trailers ↗</a></div></article>
-<article class="card"><div class="poster">COMING<br>SOON 02</div><div class="body"><span class="tag">Upcoming releases</span><h3>Upcoming Hollywood Movies</h3><p>Find official previews for upcoming Hollywood releases.</p><a class="link" href="https://www.youtube.com/results?search_query=official+upcoming+Hollywood+movie+trailers" target="_blank" rel="noopener">Explore upcoming trailers ↗</a></div></article>
-<article class="card"><div class="poster">COMING<br>SOON 03</div><div class="body"><span class="tag">Upcoming releases</span><h3>New Teasers & First Looks</h3><p>Search for the latest official movie teasers and first looks.</p><a class="link" href="https://www.youtube.com/results?search_query=official+new+movie+teaser+first+look" target="_blank" rel="noopener">Explore new teasers ↗</a></div></article>
-</div>
-</div></section>
-
-<section id="about"><div class="wrap"><div class="kicker">About us</div><h2>Welcome to HNHDFORU</h2><p class="muted">HNHDFORU is a movie-trailer discovery website for cinema fans. Trailer links lead to YouTube search results so visitors can find official uploads. We do not host or distribute full movies.</p><div class="note" style="margin-top:18px"><strong style="color:var(--gold2)">For visitors:</strong> Always choose trailers published by the film studio, distributor or verified official channel.</div></div></section>
+<article class="card" data-title="Action movie trailer" data-genre="Action"><div class="poster">ACTION<br>TRAILER</div><div class="body"><span class="tag">Action</span><h3>Action Movie Picks</h3><p>Watch an action trailer in the on-page player.</p><button class="play" type="button" data-video="TcMBFSGVi1c" data-title="Avengers: Endgame — Official Trailer">▶ Play trailer</button></div></article>
+<article class="card" data-title="Drama movie trailer" data-genre="Drama"><div class="poster">DRAMA<br>TRAILER</div><div class="body"><span class="tag">Drama</span><h3>Drama Movie Picks</h3><p>Watch a drama trailer in the on-page player.</p><button class="play" type="button" data-video="DMOBlEcRuw8" data-title="The Pursuit of Happyness — Trailer">▶ Play trailer</button></div></article>
+<article class="card" data-title="Comedy movie trailer" data-genre="Comedy"><div class="poster">COMEDY<br>TRAILER</div><div class="body"><span class="tag">Comedy</span><h3>Comedy Movie Picks</h3><p>Watch a comedy trailer in the on-page player.</p><button class="play" type="button" data-video="pBk4NYhWNMM" data-title="Barbie — Teaser Trailer">▶ Play trailer</button></div></article>
+<article class="card" data-title="Animation movie trailer" data-genre="Animation"><div class="poster">ANIMATION<br>TRAILER</div><div class="body"><span class="tag">Animation</span><h3>Animation Movie Picks</h3><p>Watch an animated movie trailer in the on-page player.</p><button class="play" type="button" data-video="LEjhY15eCx0" data-title="Inside Out 2 — Official Trailer">▶ Play trailer</button></div></article>
+<article class="card" data-title="Thriller movie trailer" data-genre="Thriller"><div class="poster">THRILLER<br>TRAILER</div><div class="body"><span class="tag">Thriller</span><h3>Thriller Movie Picks</h3><p>Watch a thriller trailer in the on-page player.</p><button class="play" type="button" data-video="BpdDN9d9Jio" data-title="A Quiet Place Part II — Trailer">▶ Play trailer</button></div></article>
+<article class="card" data-title="Indian cinema movie trailer" data-genre="Action"><div class="poster">INDIAN<br>CINEMA</div><div class="body"><span class="tag">Indian Cinema</span><h3>Indian Movie Trailers</h3><p>Watch an Indian cinema trailer in the on-page player.</p><button class="play" type="button" data-video="NgBoMJy386M" data-title="RRR — Official Trailer">▶ Play trailer</button></div></article>
+</div><p class="empty" id="empty">No matching categories. Try another search.</p></div></section>
+<section class="upcoming" id="upcoming"><div class="wrap"><div class="kicker">First looks & previews</div><h2>Upcoming Movie Trailers</h2><p class="muted">Play featured previews right here on the website.</p><div class="grid" style="margin-top:22px">
+<article class="card"><div class="poster">INDIAN<br>CINEMA</div><div class="body"><span class="tag">Indian cinema</span><h3>Indian Movie Preview</h3><p>Play a trailer in the on-page player.</p><button class="play" type="button" data-video="NgBoMJy386M" data-title="RRR — Official Trailer">▶ Play trailer</button></div></article>
+<article class="card"><div class="poster">HOLLYWOOD<br>PREVIEW</div><div class="body"><span class="tag">Hollywood</span><h3>Hollywood Movie Preview</h3><p>Play a trailer in the on-page player.</p><button class="play" type="button" data-video="Way9Dexny3w" data-title="Dune: Part Two — Official Trailer">▶ Play trailer</button></div></article>
+<article class="card"><div class="poster">NEW<br>TEASERS</div><div class="body"><span class="tag">First looks</span><h3>New Teasers & First Looks</h3><p>Play a movie preview in the on-page player.</p><button class="play" type="button" data-video="pBk4NYhWNMM" data-title="Barbie — Teaser Trailer">▶ Play trailer</button></div></article>
+</div></div></section>
+<section id="about"><div class="wrap"><div class="kicker">About us</div><h2>Welcome to HNHDFORU</h2><p class="muted">HNHDFORU is a movie-trailer discovery website for cinema fans. Trailers are embedded from YouTube and play on this page; playback is subject to YouTube availability and its terms. We do not host or distribute full movies.</p><div class="note" style="margin-top:18px"><strong style="color:var(--gold2)">For visitors:</strong> Embedded videos are provided by their publishers. YouTube may show ads or require cookies for playback.</div></div></section>
 </main>
 <footer><div class="wrap foot"><span>© <span id="year"></span> HNHDFORU</span><span>Movie trailers · Upcoming previews · Official sources</span></div></footer>
+<div class="player-modal" id="playerModal" role="dialog" aria-modal="true" aria-labelledby="playerTitle" aria-hidden="true"><div class="player-box"><div class="player-top"><h2 id="playerTitle">Movie trailer</h2><button class="close" id="closePlayer" type="button" aria-label="Close trailer">Close ✕</button></div><div class="video-frame" id="videoFrame"></div><p class="player-note">Trailer playback is provided by YouTube.</p></div></div>
 <script>
 const search=document.getElementById('search'),genre=document.getElementById('genre'),cards=[...document.querySelectorAll('#featuredGrid .card')],empty=document.getElementById('empty');
 function filter(){const q=search.value.toLowerCase().trim(),g=genre.value;let n=0;cards.forEach(c=>{const ok=c.dataset.title.toLowerCase().includes(q)&&(g==='all'||c.dataset.genre===g);c.hidden=!ok;if(ok)n++});empty.style.display=n?'none':'block'}
 search.addEventListener('input',filter);genre.addEventListener('change',filter);document.getElementById('year').textContent=new Date().getFullYear();
+const modal=document.getElementById('playerModal'),frame=document.getElementById('videoFrame'),playerTitle=document.getElementById('playerTitle'),closePlayer=document.getElementById('closePlayer');
+function closeTrailer(){modal.removeAttribute('open');modal.setAttribute('aria-hidden','true');frame.replaceChildren();document.body.style.overflow=''}
+document.querySelectorAll('[data-video]').forEach(button=>button.addEventListener('click',()=>{playerTitle.textContent=button.dataset.title;const iframe=document.createElement('iframe');iframe.src='https://www.youtube-nocookie.com/embed/'+encodeURIComponent(button.dataset.video)+'?autoplay=1&rel=0';iframe.title=button.dataset.title;iframe.allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';iframe.referrerPolicy='strict-origin-when-cross-origin';iframe.allowFullscreen=true;frame.replaceChildren(iframe);modal.setAttribute('open','');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';closePlayer.focus()}));
+closePlayer.addEventListener('click',closeTrailer);modal.addEventListener('click',e=>{if(e.target===modal)closeTrailer()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.hasAttribute('open'))closeTrailer()});
 </script>
 </body></html>
